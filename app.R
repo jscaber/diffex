@@ -1,3 +1,4 @@
+# Check for availability of required packages, install if not available
 list.of.packages <- c("shiny", "ggplot2")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -7,6 +8,7 @@ library(ggplot2)
 
 
 # UI for app
+
 ui<-(pageWithSidebar(
   # title
   headerPanel("Select Options"),
